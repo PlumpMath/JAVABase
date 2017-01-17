@@ -13,7 +13,7 @@ import net.sf.cglib.proxy.MethodProxy;
  * @date : 2017年1月16日 下午6:10:32
  * @version : 2017年1月16日 Zak 首次创建
  */
-public class StudentProxy implements MethodInterceptor {
+public class CGLibProxy implements MethodInterceptor {
   private Enhancer enhancer;
 
   public <T> T getProxy( Class<T> clazz ) {
@@ -27,7 +27,7 @@ public class StudentProxy implements MethodInterceptor {
   @Override
   public Object intercept( Object object, Method method, Object[] args, MethodProxy proxy ) throws Throwable {
     System.out.println("before");
-    proxy.invoke(object, args);
+    proxy.invokeSuper(object, args);
     System.out.println("after");
     return null;
   }

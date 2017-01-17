@@ -10,7 +10,7 @@ public class Bus implements Car {
 
   @Override
   public void drive() {
-    System.out.println("老司机开出啦！");
+    System.out.println("老司机开车啦！");
   }
 
   @Override

@@ -9,7 +9,7 @@ package com.zz.test.cglib;
 public class Main {
 
   public static void main( String[] args ) {
-    StudentProxy proxy = new StudentProxy();
+    CGLibProxy proxy = new CGLibProxy();
     Student student = proxy.getProxy(Student.class);
     student.sayHello();
 
